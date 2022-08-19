@@ -139,7 +139,7 @@ os.makedirs(STATIC_ROOT, exist_ok=True)
 STATICFILES_DIRS = (
 os.path.join(BASE_DIR, 'static'),
 )
-django_heroku.settings(locals())
+
 
 
 
@@ -166,3 +166,6 @@ EMAIL_PORT = '465'
 
 
 # django_heroku.settings(locals())
+# Configure Django App for Heroku.
+import django_on_heroku
+django_on_heroku.settings(locals())
