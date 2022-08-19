@@ -127,7 +127,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)#static files are temporarily kept here
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')#django permanently keeps them here
+STATIC_ROOT = BASE_DIR, 'staticfiles'#django permanently keeps them here
 
 django_heroku.settings(locals())
 
